@@ -30,7 +30,7 @@ const PostUser = async () => {
     createdAt: new Date(),
     email: "user2@email",
     updatedAt: new Date(),
-    username: "swift",
+    username: "Swift",
   });
 
   const groupUser1 = await GroupUser.create({

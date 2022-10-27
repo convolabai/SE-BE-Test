@@ -12,10 +12,13 @@ const UpdateCapitalUsername = async () => {
   // find all user for update their username
   const users = await User.find();
 
-  // let's capitalize their username
+  // let's capitalize their username if first char is a lower case
   await Promise.all(
     users.map(async (user) => {
       let username = user.username;
+      if (username.charAt(0) === username.charAt(0).toUpperCase()) {
+        return;
+      }
       let capitalizeUsername =
         username.charAt(0).toUpperCase() + username.slice(1);
       await User.findByIdAndUpdate(user._id, {

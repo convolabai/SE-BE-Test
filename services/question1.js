@@ -13,7 +13,7 @@ const ExportCsv = async () => {
   // declare csv header => Group Name,Username,Email
   const exportObject = ["Group Name,Username,Email"];
 
-  // find all GroupUser for get user object and group object
+  // find all GroupUser for get user object and group object, also sort order by groupId.name then userId.username
   const groupUsers = await GroupUser.aggregate([
     {
       $lookup: {
@@ -44,7 +44,7 @@ const ExportCsv = async () => {
     })
   );
 
-  // join array by \n will get new line in every item
+  // join array by \n will get new line in every rows
   const dataCsv = exportObject.join("\n");
   const fileName = `data-${Date.now()}.csv`;
   fs.writeFile(fileName, dataCsv, "utf-8", (err) => {
