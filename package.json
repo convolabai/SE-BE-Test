@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "node seed.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,8 @@
     "mongoose": "^5.13.14"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@jackfranklin/test-data-bot": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "eslint": "^8.7.0",
