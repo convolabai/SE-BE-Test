@@ -34,7 +34,15 @@ const groupBuilder = build('Group', {
   },
 });
 
+function getDateInNovember2021() {
+  return faker.date.between(
+    '2021-11-01T00:00:00.000Z',
+    '2021-11-30T23:59:59.999Z'
+  );
+}
+
 module.exports = {
   userBuilder,
   groupBuilder,
+  getDateInNovember2021,
 };

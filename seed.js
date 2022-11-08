@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 const Group = require('./models/group');
 const GroupUser = require('./models/group-user');
-const { userBuilder, groupBuilder } = require('./mocks');
+const { userBuilder, groupBuilder, getDateInNovember2021 } = require('./mocks');
 
 // Users will be splitted equally into public and private groups
 const mockUsers = Array.from({ length: 100 }, () => userBuilder());
@@ -17,12 +17,31 @@ const mockPrivateGroups = Array.from({ length: 10 }, () =>
   groupBuilder({ traits: 'private' })
 );
 
-const mockPrivateGroupUsers = mockUsersInPrivateGroup.map(({ _id: userId }) => {
-  return {
-    groupId: random(mockPrivateGroups)._id,
-    userId,
-  };
-});
+// Records of user who join pivate group recently
+const mockRecentPrivateGroupUsers = mockUsersInPrivateGroup
+  .slice(0, 25)
+  .map(({ _id: userId }) => {
+    return {
+      groupId: random(mockPrivateGroups)._id,
+      userId,
+    };
+  });
+
+// Records of user who join pivate groups in November 2021
+const mockNovPrivateGroupUsers = mockUsersInPrivateGroup
+  .slice(25)
+  .map(({ _id: userId }) => {
+    return {
+      groupId: random(mockPrivateGroups)._id,
+      userId,
+      createdAt: getDateInNovember2021(),
+    };
+  });
+
+const mockPrivateGroupUsers = [
+  ...mockRecentPrivateGroupUsers,
+  ...mockNovPrivateGroupUsers,
+];
 const mockPublicGroupUsers = mockUsersInPublicGroup.map(({ _id: userId }) => {
   return {
     groupId: random(mockPublicGroups)._id,
