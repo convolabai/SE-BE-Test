@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "seed": "node seed.js"
+    "seed": "node seed.js",
+    "question2": "node commands/updateUsername.js"
   },
   "keywords": [],
   "author": "",
