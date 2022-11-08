@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "seed": "node seed.js",
+    "question1": "node commands/findUsersInPrivateGroup.js",
     "question2": "node commands/updateUsername.js"
   },
   "keywords": [],
