@@ -26,7 +26,7 @@ Schema files are located in the `/schemas` folder. The folder contains 3 schema 
 2. Group
 3. Group User
 ### User
-An idividual user must have username and eamil registered in the system.
+An individual user must have username and email registered in the system.
 ### Group
 The `meta.isPrivate` field is a flag to specify if a group is private or not.
 ### Group User
