@@ -6,6 +6,6 @@ const GroupUserSchema = new Schema({
   updatedAt: { type: Date, default: new Date() },
   userId: { type: Schema.ObjectId, required: true },
 });
-
+//test
 module.exports = GroupUserSchema;
 
