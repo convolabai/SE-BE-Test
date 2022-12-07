@@ -12,6 +12,8 @@
   "dependencies": {
     "auto-load": "^3.0.4",
     "dotenv": "^14.2.0",
+    "fs": "^0.0.1-security",
+    "json2csv": "^5.0.7",
     "mongoose": "^5.13.14"
   },
   "devDependencies": {
