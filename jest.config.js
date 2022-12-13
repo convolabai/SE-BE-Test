@@ -22,15 +22,13 @@ module.exports = {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "<rootDir>/coverage",
+  coverageDirectory: '<rootDir>/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    "<rootDir>/node_modules/"
-  ],
+  coveragePathIgnorePatterns: ['<rootDir>/node_modules/'],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -75,22 +73,13 @@ module.exports = {
   // ],
 
   // An array of file extensions your modules use
-  moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
-  ],
+  moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  modulePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/', '<rootDir>/.yarn/',],
+  modulePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/dist/', '<rootDir>/node_modules/', '<rootDir>/.yarn/'],
 
   // Activates notifications for test results
   // notify: false,
@@ -128,7 +117,7 @@ module.exports = {
   // ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
-  runner: "jest-runner",
+  runner: 'jest-runner',
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
@@ -143,7 +132,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jest-environment-node",
+  testEnvironment: 'jest-environment-node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -152,17 +141,10 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    "<rootDir>/tests/**/*.test.js"
-  ],
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    "<rootDir>/node_modules/",
-    "<rootDir>/coverage/",
-    "<rootDir>/.yarn/",
-    "<rootDir>/.git/"
-  ],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/coverage/', '<rootDir>/.yarn/', '<rootDir>/.git/'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
