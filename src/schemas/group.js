@@ -8,13 +8,9 @@ const GroupSchema = new Schema({
   name: { type: String, required: true },
   status: {
     type: String,
-    enum: [
-      'active',
-      'deleted',
-    ],
+    enum: ['active', 'deleted'],
   },
   updatedAt: { type: Date, default: new Date() },
 });
 
 module.exports = GroupSchema;
-

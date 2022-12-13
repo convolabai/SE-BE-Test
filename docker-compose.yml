@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongo:
+    container_name: se-be-test-mongo
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=se-be-root
+      - MONGO_INITDB_ROOT_PASSWORD=se-be-pass
+      - MONGO_INITDB_USERNAME=se-be
+      - MONGO_INITDB_PASSWORD=pass
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+
+volumes:
+  mongo-data:
+  mongo-config:

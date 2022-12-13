@@ -8,4 +8,3 @@ const GroupUserSchema = new Schema({
 });
 
 module.exports = GroupUserSchema;
-
