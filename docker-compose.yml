@@ -3,17 +3,15 @@ version: '3.8'
 services:
   mongo:
     container_name: se-be-test-mongo
-    image: mongo
+    image: mongo:latest
     restart: always
     environment:
-      - MONGO_INITDB_DATABASE=test
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=pass
-      - MONGO_INITDB_USERNAME=se-be
-      - MONGO_INITDB_PASSWORD=se-be
     ports:
       - 27017:27017
     volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
       - mongo-data:/data/db
       - mongo-config:/data/configdb
 

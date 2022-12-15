@@ -1,6 +1,6 @@
-const { Schema } = require('mongoose');
+import mongoose from 'mongoose';
 
-const GroupSchema = new Schema({
+const GroupSchema = new mongoose.Schema({
   createdAt: { type: Date, default: new Date() },
   meta: {
     isPrivate: { type: Boolean, default: false },
@@ -13,4 +13,4 @@ const GroupSchema = new Schema({
   updatedAt: { type: Date, default: new Date() },
 });
 
-module.exports = GroupSchema;
+export default GroupSchema;
