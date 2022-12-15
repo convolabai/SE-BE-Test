@@ -86,6 +86,9 @@ export default {
     '#tests-data/(.*)': '<rootDir>/tests/data/$1',
     '#tests-integration/(.*)': '<rootDir>/tests/unit/$1',
     '#tests-unit/(.*)': '<rootDir>/tests/integration/$1',
+    '#tests-helpers/(.*)': '<rootDir>/tests/helpers/$1',
+    '#input/(.*)': '<rootDir>/tests/data/input/$1',
+    '#output/(.*)': '<rootDir>/tests/data/output/$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

@@ -12,7 +12,10 @@
       "#tests/*": ["./tests/*"],
       "#tests-data/*": ["./tests/data/*"],
       "#tests-integration/*": ["./tests/unit/*"],
-      "#tests-unit/*": ["./tests/integration/*"]
+      "#tests-unit/*": ["./tests/integration/*"],
+      "#tests-helpers": ["./tests/helpers/*"],
+      "#input/*": ["./tests/data/input/*"],
+      "#output/*": ["./tests/data/output/*"]
     }
   },
   "exclude": ["node_modules", "dist", "coverage", ".yarn", ".git"],
