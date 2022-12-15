@@ -2,6 +2,4 @@ const formatPrivateGroupsUsers = (users) => {
   return 'formatted';
 };
 
-return {
-  formatPrivateGroupsUsers,
-};
+export { formatPrivateGroupsUsers };

@@ -17,4 +17,4 @@ class SEBEUsecase {
   }
 }
 
-export default SEBETest;
+export default SEBEUsecase;

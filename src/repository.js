@@ -23,7 +23,7 @@ class SEBERepository {
     return result;
   }
 
-  writePrivateGroupsUsersToCSV(uesrs) {
+  writePrivateGroupsUsersToCSV(users) {
     const formattedUsers = formatPrivateGroupsUsers(users);
     const status = this.csvAdapter.write(formattedUsers);
     return status;
