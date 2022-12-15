@@ -7,10 +7,10 @@ services:
     restart: always
     environment:
       - MONGO_INITDB_DATABASE=test
-      - MONGO_INITDB_ROOT_USERNAME=se-be-root
-      - MONGO_INITDB_ROOT_PASSWORD=se-be-pass
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass
       - MONGO_INITDB_USERNAME=se-be
-      - MONGO_INITDB_PASSWORD=pass
+      - MONGO_INITDB_PASSWORD=se-be
     ports:
       - 27017:27017
     volumes:
