@@ -22,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@json2csv/plainjs": "^6.1.2",
     "auto-load": "^3.0.4",
     "dotenv": "^14.2.0",
     "mongoose": "^5.13.14"

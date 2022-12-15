@@ -1646,6 +1646,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@json2csv/formatters@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "@json2csv/formatters@npm:6.1.2"
+  checksum: 058c288c82aaa0dfe2d06abf70ff114f20d8f77ad8bc5c24e6fbd1ba48eaa65837b405c1887caa97300231f50464b2ac3b1f6bfc158f3ccc246c511e408729f7
+  languageName: node
+  linkType: hard
+
+"@json2csv/plainjs@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "@json2csv/plainjs@npm:6.1.2"
+  dependencies:
+    "@json2csv/formatters": ^6.1.2
+    "@streamparser/json": ^0.0.10
+    lodash.get: ^4.4.2
+  checksum: fa6ea262c14204cc4bb43530f5d1ff2cad790818de7a777c68979a1faa99d450074de5b37d9979d4c30169743e3c2a2c669670d6e2e20214d7cc0c50e5474333
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1715,6 +1733,13 @@ __metadata:
   dependencies:
     "@sinonjs/commons": ^1.7.0
   checksum: 7d3aef54e17c1073101cb64d953157c19d62a40e261a30923fa1ee337b049c5f29cc47b1f0c477880f42b5659848ba9ab897607ac8ea4acd5c30ddcfac57fca6
+  languageName: node
+  linkType: hard
+
+"@streamparser/json@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@streamparser/json@npm:0.0.10"
+  checksum: 70312a774535ca19124bc7c0071d43e8bea0699c89ef9a322e4a6faddb324a870f0a23f7af51124b0bfebd8c082698df97e58387201fe2ad37ece32308b24641
   languageName: node
   linkType: hard
 
@@ -4538,6 +4563,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.get@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
+  languageName: node
+  linkType: hard
+
 "lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
@@ -5818,6 +5850,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.5
     "@babel/preset-env": ^7.20.2
+    "@json2csv/plainjs": ^6.1.2
     "@typescript-eslint/eslint-plugin": ^5.10.0
     "@typescript-eslint/parser": ^5.10.0
     auto-load: ^3.0.4

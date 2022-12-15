@@ -1,5 +1,4 @@
-import { questionOne } from '#src/question-1/index.js';
-import { questionTwo } from './src/question-2/index.js';
+import Usecase from 'src/usecase';
 
 const QUESTION1 = '1';
 const QUESTION2 = '2';
@@ -7,10 +6,11 @@ const QUESTION2 = '2';
 const args = process.argv.slice(2);
 const question = args[0];
 
+const usecase = new Usecase();
 if (question === QUESTION1) {
-  questionOne();
+  usecase.questionOne();
 } else if (question === QUESTION2) {
-  questionTwo();
+  usecase.questionTwo();
 } else {
   console.log("Argument must be either '1' or '2'.");
 }
