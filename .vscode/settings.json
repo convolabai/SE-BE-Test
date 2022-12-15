@@ -4,5 +4,6 @@
   "editor.formatOnPaste": false,
   "prettier.useEditorConfig": false,
   "prettier.useTabs": false,
-  "prettier.configPath": ".prettierrc"
+  "prettier.configPath": ".prettierrc",
+  "editor.rulers": [80, 120]
 }
