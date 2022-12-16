@@ -3,9 +3,9 @@ import config from '#root/config';
 import UserSchema from '#schemas/user';
 import GroupSchema from '#schemas/group';
 import GroupUserSchema from '#schemas/group-user';
-import { userTestCollection } from '#tests-data/input/user';
-import { groupTestCollection } from '#tests-data/input/group';
-import { groupUserTestCollection } from '#tests-data/input/group-user';
+import { userTestCollection } from '#input/user';
+import { groupTestCollection } from '#input/group';
+import { groupUserTestCollection } from '#input/group-user';
 
 const testDbUri = config.mongo.URI;
 

@@ -16,7 +16,7 @@ describe('Given a list of users', () => {
       const expected = 'successful';
       const actual = usecase.questionOne();
 
-      const collectionQuery = await findInTestDb('users', {});
+      const collectionQuery = await findInTestDb('groupusers', {});
 
       const content = expect(actual).toEqual(expected);
     });
