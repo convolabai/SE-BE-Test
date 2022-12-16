@@ -5,10 +5,10 @@ class SEBEUsecase {
     this.repository = new SEBERepository();
   }
 
-  questionOne() {
-    const users = this.repository.getSortedPrivateGroupsUsers();
+  async questionOne() {
+    const users = await this.repository.getSortedPrivateGroupsUsers();
     const writeStatus = this.repository.writePrivateGroupsUsersToCSV(users);
-    return writeStatus;
+    return users;
   }
 
   questionTwo() {

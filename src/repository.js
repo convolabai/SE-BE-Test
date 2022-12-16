@@ -7,12 +7,21 @@ class SEBERepository {
     this.csvAdapter = new CSVAdapter();
   }
 
-  getSortedPrivateGroupsUsers() {
-    this.mongoAdapter.connect();
-    const query = {};
-    const result = this.mongoAdapter.read(query);
-    this.mongoAdapter.close();
-    return result;
+  async getSortedPrivateGroupsUsers() {
+    let connection = null;
+    try {
+      connection = await this.mongoAdapter.connect();
+      const query = {};
+      const result = await this.mongoAdapter.find(connection, 'users', query);
+      return result;
+    } catch (e) {
+      console.log('Error querying sorted private groups users');
+      console.log(e);
+    } finally {
+      if (connection) {
+        await this.mongoAdapter.close(connection);
+      }
+    }
   }
 
   capitalizeUserFirstNames() {

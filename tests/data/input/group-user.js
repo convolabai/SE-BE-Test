@@ -1,5 +1,6 @@
 export const groupUserTestCollection = [
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c43',
     createdAt: '2021-10-01T21:58:07.982Z',
     updatedAt: '2021-10-01T21:58:08.982Z',
@@ -7,6 +8,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307561',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c44',
     createdAt: '2021-10-15T22:00:01.982Z',
     updatedAt: '2021-10-15T22:00:02.982Z',
@@ -14,6 +16,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307562',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c45',
     createdAt: '2021-10-31T22:00:01.982Z',
     updatedAt: '2021-10-31T22:00:02.982Z',
@@ -21,6 +24,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307563',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c46',
     createdAt: '2021-11-01T22:04:01.982Z',
     updatedAt: '2021-11-01T22:04:02.982Z',
@@ -28,6 +32,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307564',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c47',
     createdAt: '2021-11-04T22:06:01.982Z',
     updatedAt: '2021-11-04T22:06:02.982Z',
@@ -35,6 +40,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307565',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c48',
     createdAt: '2021-11-06T22:08:01.982Z',
     updatedAt: '2021-11-06T22:08:02.982Z',
@@ -42,6 +48,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307566',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c49',
     createdAt: '2021-11-08T22:10:01.982Z',
     updatedAt: '2021-11-08T22:10:02.982Z',
@@ -49,6 +56,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307567',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4a',
     createdAt: '2021-11-10T22:12:01.982Z',
     updatedAt: '2021-11-10T22:12:02.982Z',
@@ -56,6 +64,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307568',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4b',
     createdAt: '2021-11-12T22:14:01.982Z',
     updatedAt: '2021-11-12T22:14:02.982Z',
@@ -63,6 +72,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307569',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4c',
     createdAt: '2021-11-13T22:16:01.982Z',
     updatedAt: '2021-11-13T22:16:02.982Z',
@@ -70,6 +80,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756a',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4d',
     createdAt: '2021-11-15T22:58:01.982Z',
     updatedAt: '2021-11-15T22:58:02.982Z',
@@ -77,6 +88,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756b',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4e',
     createdAt: '2021-11-17T22:00:01.982Z',
     updatedAt: '2021-11-17T22:00:02.982Z',
@@ -84,6 +96,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756c',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c4f',
     createdAt: '2021-11-19T22:02:01.982Z',
     updatedAt: '2021-11-19T22:02:02.982Z',
@@ -91,6 +104,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756d',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c50',
     createdAt: '2021-11-20T22:04:01.982Z',
     updatedAt: '2021-11-20T22:04:02.982Z',
@@ -98,6 +112,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756e',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c51',
     createdAt: '2021-11-22T22:06:01.982Z',
     updatedAt: '2021-11-22T22:06:02.982Z',
@@ -105,6 +120,7 @@ export const groupUserTestCollection = [
     userId: '30303030303030303030756f',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c52',
     createdAt: '2021-11-24T22:08:01.982Z',
     updatedAt: '2021-11-24T22:08:02.982Z',
@@ -112,6 +128,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307570',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c53',
     createdAt: '2021-11-26T22:10:01.982Z',
     updatedAt: '2021-11-26T22:10:02.982Z',
@@ -119,6 +136,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307571',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c54',
     createdAt: '2021-11-27T22:12:01.982Z',
     updatedAt: '2021-11-27T22:12:02.982Z',
@@ -126,6 +144,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307572',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c55',
     createdAt: '2021-11-30T22:14:01.982Z',
     updatedAt: '2021-11-30T22:14:02.982Z',
@@ -133,6 +152,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307573',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c56',
     createdAt: '2021-12-13T22:16:01.982Z',
     updatedAt: '2021-12-01T22:16:02.982Z',
@@ -140,6 +160,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307574',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c57',
     createdAt: '2021-12-31T22:16:01.982Z',
     updatedAt: '2021-12-31T22:16:02.982Z',
@@ -147,6 +168,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307575',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c58',
     createdAt: '2022-11-13T22:16:01.982Z',
     updatedAt: '2022-12-13T22:16:02.982Z',
@@ -154,6 +176,7 @@ export const groupUserTestCollection = [
     userId: '303030303030303030307576',
   },
   {
+    __v: 0,
     _id: '639bb6ae025ead812c849c59',
     createdAt: '2022-11-30T22:16:01.982Z',
     updatedAt: '2022-12-30T22:16:02.982Z',

@@ -3,24 +3,28 @@ import config from '#root/config';
 import UserSchema from '#schemas/user';
 import GroupSchema from '#schemas/group';
 import GroupUserSchema from '#schemas/group-user';
-import { userTestCollection } from '#input/user';
-import { groupTestCollection } from '#input/group';
-import { groupUserTestCollection } from '#input/group-user';
+import { userTestCollection } from '#input/user.old';
+import { groupTestCollection } from '#input/group.old';
+import { groupUserTestCollection } from '#input/group-user.old';
 
 const testDbUri = config.mongo.URI;
 
 const connectionWrapper = async (callback) => {
+  let connection = null;
   try {
-    const db = await mongoose.connect(testDbUri, {
+    const connection = await mongoose.connect(testDbUri, {
       useNewUrlParser: true,
       useFindAndModify: false,
       useUnifiedTopology: true,
-    });
-    const result = await callback(db.connection);
-    await db.connection.close();
+    }).connection;
+    const result = await callback(connection);
     return result;
   } catch (e) {
     console.log(e);
+  } finally {
+    if (connection) {
+      await connection.close();
+    }
   }
 };
 
@@ -39,14 +43,18 @@ const initTestDb = async () => {
 
 const cleanTestDb = async () => {
   await connectionWrapper(async (connection) => {
-    await connection.dropCollection('users').catch((e, r) => {
+    await connection.dropCollection('users').catch((e) => {
       console.log(`User collection doesn't exist`);
     });
-    await connection.dropCollection('groups').catch((e, r) => {
+    await connection.dropCollection('groups').catch((e) => {
       console.log(`Group collection doesn't exist`);
     });
-    await connection.dropCollection('groups').catch((e, r) => {
-      console.log(`Group collection doesn't exist`);
+    await connection.dropCollection('groupusers').catch((e) => {
+      console.log(`GroupUser collection doesn't exist`);
+    });
+    await connection.dropDatabase().catch((e) => {
+      console.log('Error deleting test database');
+      console.log(e);
     });
   });
 };

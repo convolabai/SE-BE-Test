@@ -1,4 +1,4 @@
-export const formattedUsers = [
+const formattedUsers = [
   { groupName: 'Group 3', username: '5ser10', email: 'user10@email.com' },
   { groupName: 'Group 3', username: 'user6', email: 'user6@email.com' },
   { groupName: 'Group 3', username: 'user14', email: 'user14@email.com' },
@@ -9,7 +9,7 @@ export const formattedUsers = [
   { groupName: 'Group 4', username: 'Sser11', email: 'user11@email.com' },
 ];
 
-export const csvHeaders = {
+const csvHeaders = {
   fields: [
     { label: 'Group Name', value: 'groupName' },
     { label: 'Username', value: 'username' },

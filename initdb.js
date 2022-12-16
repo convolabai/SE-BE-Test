@@ -3,9 +3,9 @@ import config from './config.js';
 import UserSchema from './schemas/user.js';
 import GroupSchema from './schemas/group.js';
 import GroupUserSchema from './schemas/group-user.js';
-import { userTestCollection } from './tests/data/input/user.js';
-import { groupTestCollection } from './tests/data/input/group.js';
-import { groupUserTestCollection } from './tests/data/input/group-user.js';
+import { userTestCollection } from './tests/data/input/user.old.js';
+import { groupTestCollection } from './tests/data/input/group.old.js';
+import { groupUserTestCollection } from './tests/data/input/group-user.old.js';
 
 const testDbUri = config.mongo.URI;
 

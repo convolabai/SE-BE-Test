@@ -1,14 +1,30 @@
+import mongoose from 'mongoose';
 import config from '#root/config';
 
-const connUri = config.mongo.URI;
+const testDbUri = config.mongo.URI;
 
 class MongoAdapter {
-  connect() {}
+  async connect() {
+    const db = await mongoose.connect(testDbUri, {
+      useNewUrlParser: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    });
+    return db.connection;
+  }
 
-  close() {}
+  async close(connection) {
+    connection.close();
+  }
 
-  read(query) {
-    return 'successful';
+  async find(connection, collectionName, query) {
+    const collection = connection.collection(collectionName);
+    return collection.find(query).toObject();
+  }
+
+  async aggregate(connection, collectionName, query) {
+    const collection = connection.collection(collectionName);
+    return collection.aggregate(query).toArray();
   }
 
   write(query) {
