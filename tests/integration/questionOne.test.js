@@ -1,6 +1,6 @@
 import config from '#root/config';
 import SEBEUsecase from '#src/usecase';
-import { initTestDb, cleanTestDb, findInTestDb } from '#tests-helpers/mongo';
+import { initTestDb, cleanTestDb } from '#tests-helpers/mongo';
 import { userTestCollection } from '#input/user';
 import { formattedUsers } from '#output/formattedUsers';
 
@@ -8,6 +8,7 @@ const dbUri = config.mongo.URI;
 const usecase = new SEBEUsecase();
 
 describe('Given a list of users', () => {
+  let connection = null;
   beforeAll(async () => {
     await cleanTestDb();
     await initTestDb();
@@ -19,7 +20,7 @@ describe('Given a list of users', () => {
       const expected = userTestCollection;
       const actual = await usecase.questionOne();
 
-      const content = expect(actual).toEqual(expected);
+      expect(actual).toEqual(expected);
     });
   });
 });

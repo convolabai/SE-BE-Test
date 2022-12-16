@@ -8,5 +8,6 @@
   "editor.detectIndentation": false,
   "prettier.useTabs": false,
   "prettier.configPath": ".prettierrc",
-  "editor.rulers": [80, 120]
+  "editor.rulers": [80, 120],
+  "jest.autoRun": "false"
 }

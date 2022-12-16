@@ -27,11 +27,13 @@
     "@json2csv/plainjs": "^6.1.2",
     "auto-load": "^3.0.4",
     "dotenv": "^14.2.0",
-    "mongoose": "^5.13.14"
+    "mongoose": "^5.13.14",
+    "mongodb": "^4.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
+    "@shelf/jest-mongodb": "^4.1.4",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "babel-jest": "^29.3.1",

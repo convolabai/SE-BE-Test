@@ -1,5 +1,10 @@
+import config from '#root/config';
 import { MongoAdapter, CSVAdapter } from '#src/adapter';
 import { formatPrivateGroupsUsers } from '#src/formatter';
+
+const userCollectionName = config.mongo.collection.user;
+const groupCollectionName = config.mongo.collection.group;
+const groupUserCollectionName = config.mongo.collection.groupuser;
 
 class SEBERepository {
   constructor() {
@@ -8,19 +13,15 @@ class SEBERepository {
   }
 
   async getSortedPrivateGroupsUsers() {
-    let connection = null;
     try {
-      connection = await this.mongoAdapter.connect();
-      const query = {};
-      const result = await this.mongoAdapter.find(connection, 'users', query);
+      await this.mongoAdapter.connect();
+      const result = await this.mongoAdapter.find(userCollectionName, {}, null);
       return result;
     } catch (e) {
       console.log('Error querying sorted private groups users');
       console.log(e);
     } finally {
-      if (connection) {
-        await this.mongoAdapter.close(connection);
-      }
+      await this.mongoAdapter.close();
     }
   }
 
