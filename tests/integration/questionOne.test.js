@@ -8,7 +8,6 @@ const dbUri = config.mongo.URI;
 const usecase = new SEBEUsecase();
 
 describe('Given a list of users', () => {
-  let connection = null;
   beforeAll(async () => {
     await cleanTestDb();
     await initTestDb();
