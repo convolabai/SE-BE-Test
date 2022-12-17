@@ -27,8 +27,9 @@
     "@json2csv/plainjs": "^6.1.2",
     "auto-load": "^3.0.4",
     "dotenv": "^14.2.0",
-    "mongoose": "^5.13.14",
-    "mongodb": "^4.12.1"
+    "json2csv": "^5.0.7",
+    "mongodb": "^4.12.1",
+    "mongoose": "^5.13.14"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",

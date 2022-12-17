@@ -12,4 +12,5 @@ export default {
       groupuser: process.env.MONGO_GROUPUSER_COLLECTION || 'groupusers',
     },
   },
+  csv: process.env.QUESTION_ONE_CSV_FILE || question1.csv,
 };

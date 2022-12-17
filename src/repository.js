@@ -15,7 +15,65 @@ class SEBERepository {
   async getSortedPrivateGroupsUsers() {
     try {
       await this.mongoAdapter.connect();
-      const result = await this.mongoAdapter.find(userCollectionName, {}, null);
+      const pipeline = [
+        {
+          $lookup: {
+            from: 'groups',
+            localField: 'groupId',
+            foreignField: '_id',
+            as: 'group',
+          },
+        },
+        {
+          $unwind: '$group',
+        },
+        {
+          $project: { userId: 1, groupname: '$group.name', isPrivate: '$group.meta.isPrivate' },
+        },
+        {
+          $match: {
+            isPrivate: true,
+          },
+        },
+        {
+          $lookup: {
+            from: 'users',
+            localField: 'userId',
+            foreignField: '_id',
+            as: 'user',
+          },
+        },
+        {
+          $unwind: '$user',
+        },
+
+        {
+          $match: {
+            $expr: {
+              $and: [
+                {
+                  $eq: [{ $month: '$user.createdAt' }, 11],
+                },
+                {
+                  $eq: [{ $year: '$user.createdAt' }, 2021],
+                },
+              ],
+            },
+          },
+        },
+        {
+          $project: {
+            _id: 0,
+            'Group Name': '$groupname',
+            Username: '$user.username',
+            Email: '$user.email',
+          },
+        },
+        {
+          $sort: { 'Group Name': 1, Username: 1 },
+        },
+      ];
+      const result = await this.mongoAdapter.aggregate(groupUserCollectionName, pipeline);
       return result;
     } catch (e) {
       console.log('Error querying sorted private groups users');

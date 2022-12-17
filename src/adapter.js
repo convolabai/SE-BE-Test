@@ -30,7 +30,7 @@ class MongoAdapter {
     return queryResult;
   }
 
-  async aggregate(collection, pipeline, query) {
+  async aggregate(collection, pipeline) {
     const aggregateResult = await this.db.collection(collection).aggregate(pipeline).toArray();
     return aggregateResult;
   }
