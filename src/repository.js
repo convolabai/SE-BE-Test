@@ -1,10 +1,11 @@
 import config from '#root/config';
 import { MongoAdapter, CSVAdapter } from '#src/adapter';
-import { formatPrivateGroupsUsers } from '#src/formatter';
 
 const userCollectionName = config.mongo.collection.user;
 const groupCollectionName = config.mongo.collection.group;
 const groupUserCollectionName = config.mongo.collection.groupuser;
+const csvFileName = config.csv;
+const csvFields = ['Group Name', 'Username', 'Email'];
 
 class SEBERepository {
   constructor() {
@@ -83,18 +84,17 @@ class SEBERepository {
     }
   }
 
+  async writePrivateGroupsUsersToCSV(users) {
+    await this.csvAdapter.jsonToCSVFile(csvFileName, csvFields, users);
+    return 'Success';
+  }
+
   capitalizeUserFirstNames() {
     this.mongoAdapter.connect();
     const query = {};
     const result = this.mongoAdapter.write(query);
     this.mongoAdapter.close();
     return result;
-  }
-
-  writePrivateGroupsUsersToCSV(users) {
-    const formattedUsers = formatPrivateGroupsUsers(users);
-    const status = this.csvAdapter.write(formattedUsers);
-    return status;
   }
 }
 

@@ -7,8 +7,8 @@ class SEBEUsecase {
 
   async questionOne() {
     const users = await this.repository.getSortedPrivateGroupsUsers();
-    const writeStatus = this.repository.writePrivateGroupsUsersToCSV(users);
-    return users;
+    const writeStatus = await this.repository.writePrivateGroupsUsersToCSV(users);
+    return writeStatus;
   }
 
   questionTwo() {

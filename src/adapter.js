@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs';
+import * as json2csv from 'json2csv';
 import { MongoClient } from 'mongodb';
 import config from '#root/config';
 
@@ -41,8 +43,19 @@ class MongoAdapter {
 }
 
 class CSVAdapter {
-  write(content) {
-    return 'successful';
+  jsonToCSV(fields, data) {
+    const opts = { fields };
+    this.parser = new json2csv.Parser(opts);
+    return this.parser.parse(data);
+  }
+
+  async csvToFile(fileName, csvData) {
+    await fs.writeFile(fileName, csvData);
+  }
+
+  async jsonToCSVFile(fileName, fields, data) {
+    const csvData = this.jsonToCSV(fields, data);
+    await this.csvToFile(fileName, csvData);
   }
 }
 

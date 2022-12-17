@@ -9,12 +9,4 @@ const formattedUsers = [
   { 'Group Name': 'Group 4', Username: 'jser15', Email: 'user15@email.com' },
 ];
 
-const csvHeaders = {
-  fields: [
-    { label: 'Group Name', value: 'groupName' },
-    { label: 'Username', value: 'username' },
-    { label: 'Email', value: 'email' },
-  ],
-};
-
-export { formattedUsers, csvHeaders };
+export { formattedUsers };

@@ -49,20 +49,19 @@ const cleanTestDb = async () => {
       .collection(userCollectionName)
       .drop()
       .catch((e) => {
-        console.log(`User collection doesn't exist`);
-        console.log(e);
+        console.log('User collection had not yet been created');
       });
     await db
       .collection(groupCollectionName)
       .drop()
       .catch((e) => {
-        console.log(`Group collection doesn't exist`);
+        console.log('Group collection had not yet been created');
       });
     await db
       .collection(groupUserCollectionName)
       .drop()
       .catch((e) => {
-        console.log(`GroupUser collection doesn't exist`);
+        console.log('GroupUser collection had not yet been created');
       });
   });
 };
