@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.useEditorConfig": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "prettier.useTabs": false,
+  "prettier.configPath": ".prettierrc",
+  "editor.rulers": [80, 120],
+  "jest.autoRun": "false",
+  "jest.jestCommandLine": "yarn test"
+}
