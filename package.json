@@ -43,12 +43,8 @@
     "#root/*": "./*",
     "#src/*": "./src/*",
     "#schemas/*": "./schemas/*",
-    "#question-1/*": "./src/question-1/*",
-    "#question-2/*": "./src/question-2/*",
     "#tests/*": "./tests/*",
     "#tests-data/*": "./tests/data/*",
-    "#tests-integration/*": "./tests/unit/*",
-    "#tests-unit/*": "./tests/integration/*",
     "#tests-helpers/*": "./tests/helpers/*",
     "#input/*": "./tests/data/input/*",
     "#output/*": "./tests/data/output/*"
