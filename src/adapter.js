@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import * as json2csv from 'json2csv';
 import { MongoClient } from 'mongodb';
-import config from '#root/config';
+import config from '#root/config.js';
 
 const testDbUri = config.mongo.URI;
 const testDbName = config.mongo.db;

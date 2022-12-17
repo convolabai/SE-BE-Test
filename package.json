@@ -9,8 +9,8 @@
     "startdb": "yarn removedb && docker compose up --build --force-recreate -V",
     "initdb": "node initdb",
     "start": "yarn start:question1 && yarn start:question2",
-    "start:question1": "yarn initdb && node index.js 1",
-    "start:question2": "yarn initdb && node index.js 2",
+    "start:question1": "yarn initdb && node index.js 1 && echo 'Question 1 Finished\n\n'",
+    "start:question2": "yarn initdb && node index.js 2 && echo 'Question 2 Finished\n\n'",
     "test": "jest --watchAll=false --coverage --debug --runInBand",
     "prettify": "prettier --config .prettierrc \"src/**/*.js\" \"tests/**/*.js\" --write"
   },

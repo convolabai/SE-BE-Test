@@ -1,4 +1,4 @@
-import Usecase from 'src/usecase';
+import SEBEUsecase from '#src/usecase.js';
 
 const QUESTION1 = '1';
 const QUESTION2 = '2';
@@ -6,7 +6,7 @@ const QUESTION2 = '2';
 const args = process.argv.slice(2);
 const question = args[0];
 
-const usecase = new Usecase();
+const usecase = new SEBEUsecase();
 if (question === QUESTION1) {
   usecase.questionOne();
 } else if (question === QUESTION2) {

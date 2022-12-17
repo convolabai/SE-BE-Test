@@ -1,5 +1,5 @@
-import config from '#root/config';
-import { MongoAdapter, CSVAdapter } from '#src/adapter';
+import config from '#root/config.js';
+import { MongoAdapter, CSVAdapter } from '#src/adapter.js';
 
 const userCollectionName = config.mongo.collection.user;
 const groupCollectionName = config.mongo.collection.group;

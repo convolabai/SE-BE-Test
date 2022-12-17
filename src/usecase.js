@@ -1,4 +1,4 @@
-import SEBERepository from '#src/repository';
+import SEBERepository from '#src/repository.js';
 
 class SEBEUsecase {
   constructor() {
