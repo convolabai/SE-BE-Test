@@ -30,6 +30,9 @@ const connectionWrapper = async (callback) => {
   }
 };
 
+const aggregateDataInDb = async (collectionName, pipeline) =>
+  await connectionWrapper(async (db) => db.collection(collectionName).aggregate(pipeline).toArray());
+
 const initTestDb = async () => {
   await connectionWrapper(async (db) => {
     await db.createCollection(userCollectionName);
@@ -66,4 +69,4 @@ const cleanTestDb = async () => {
   });
 };
 
-export { initTestDb, cleanTestDb };
+export { initTestDb, cleanTestDb, aggregateDataInDb };

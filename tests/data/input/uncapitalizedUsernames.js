@@ -1,7 +1,7 @@
-const capitalizedUsernames = [
+export const uncapitalizedUsernames = [
   {
     _id: '0000000000ua',
-    username: 'User1',
+    username: 'user1',
   },
   {
     _id: '0000000000ub',
@@ -21,11 +21,11 @@ const capitalizedUsernames = [
   },
   {
     _id: '0000000000uf',
-    username: 'User6',
+    username: 'user6',
   },
   {
     _id: '0000000000ug',
-    username: 'E6ser7',
+    username: 'e6ser7',
   },
   {
     _id: '0000000000uh',
@@ -33,7 +33,7 @@ const capitalizedUsernames = [
   },
   {
     _id: '0000000000ui',
-    username: 'User9',
+    username: 'user9',
   },
   {
     _id: '0000000000uj',
@@ -53,11 +53,11 @@ const capitalizedUsernames = [
   },
   {
     _id: '0000000000un',
-    username: 'User14',
+    username: 'user14',
   },
   {
     _id: '0000000000uo',
-    username: 'Jser15',
+    username: 'jser15',
   },
   {
     _id: '0000000000up',
@@ -65,11 +65,11 @@ const capitalizedUsernames = [
   },
   {
     _id: '0000000000uq',
-    username: 'User17',
+    username: 'user17',
   },
   {
     _id: '0000000000ur',
-    username: 'TEser18',
+    username: 'tEser18',
   },
   {
     _id: '0000000000us',
@@ -77,20 +77,18 @@ const capitalizedUsernames = [
   },
   {
     _id: '0000000000ut',
-    username: 'User20',
+    username: 'user20',
   },
   {
     _id: '0000000000uu',
-    username: 'User21',
+    username: 'user21',
   },
   {
     _id: '0000000000uv',
-    username: 'User22',
+    username: 'user22',
   },
   {
     _id: '0000000000uw',
-    username: 'User23',
+    username: 'user23',
   },
 ];
-
-export { capitalizedUsernames };

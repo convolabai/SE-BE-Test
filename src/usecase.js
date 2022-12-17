@@ -11,9 +11,11 @@ class SEBEUsecase {
     return writeStatus;
   }
 
-  questionTwo() {
-    const capitalizeStatus = this.repository.capitalizeUserFirstNames();
-    return capitalizeStatus;
+  async questionTwo() {
+    const usernames = await this.repository.getUsernames();
+    const capitalizedUsernames = this.repository.capitalizeFirstLetterOfFieldInList(usernames, 'username');
+    await this.repository.updateUsernames(capitalizedUsernames);
+    return 'Success';
   }
 }
 

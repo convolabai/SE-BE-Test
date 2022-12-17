@@ -14,8 +14,7 @@
         "--testNamePattern",
         "${jest.testNamePattern}",
         "--runTestsByPath",
-        "${jest.testFile}",
-        "--runInBand"
+        "${jest.testFile}"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",

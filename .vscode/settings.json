@@ -9,5 +9,6 @@
   "prettier.useTabs": false,
   "prettier.configPath": ".prettierrc",
   "editor.rulers": [80, 120],
-  "jest.autoRun": "false"
+  "jest.autoRun": "false",
+  "jest.jestCommandLine": "yarn test"
 }

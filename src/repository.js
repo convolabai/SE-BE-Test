@@ -89,12 +89,40 @@ class SEBERepository {
     return 'Success';
   }
 
-  capitalizeUserFirstNames() {
-    this.mongoAdapter.connect();
-    const query = {};
-    const result = this.mongoAdapter.write(query);
-    this.mongoAdapter.close();
-    return result;
+  async getUsernames() {
+    try {
+      await this.mongoAdapter.connect();
+      const pipeline = [{ $project: { _id: 1, username: 1 } }];
+      const result = await this.mongoAdapter.aggregate(userCollectionName, pipeline);
+      return result;
+    } catch (e) {
+      console.log('Error querying usrenames');
+      console.log(e);
+    } finally {
+      await this.mongoAdapter.close();
+    }
+  }
+
+  async updateUsernames(usernames) {
+    try {
+      await this.mongoAdapter.connect();
+      for (const username of usernames) {
+        await this.mongoAdapter.update(
+          userCollectionName,
+          { _id: username._id },
+          { $set: { username: username.username } }
+        );
+      }
+    } catch (e) {
+      console.log('Error updating username');
+      console.log(e);
+    } finally {
+      await this.mongoAdapter.close();
+    }
+  }
+
+  capitalizeFirstLetterOfFieldInList(data, fieldName) {
+    return data.map((d) => ({ ...d, [fieldName]: d[fieldName].charAt(0).toUpperCase() + d[fieldName].slice(1) }));
   }
 }
 

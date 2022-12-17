@@ -37,8 +37,9 @@ class MongoAdapter {
     return aggregateResult;
   }
 
-  write(query) {
-    return;
+  async update(collection, query, updateContent) {
+    const updateStatus = await this.db.collection(collection).updateOne(query, updateContent);
+    return updateStatus;
   }
 }
 
