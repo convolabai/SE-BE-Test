@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=amitytestuser
+      - MONGO_INITDB_ROOT_PASSWORD_FILE=/run/secrets/mongo-initdb-root-password
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./docker-secrets/:/run/secrets/:ro
