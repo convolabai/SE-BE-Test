@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose');
+import { Schema } from 'mongoose'
+import { EGroupStatus } from '@type/group.type'
 
 const GroupSchema = new Schema({
   createdAt: { type: Date, default: new Date() },
@@ -8,13 +9,9 @@ const GroupSchema = new Schema({
   name: { type: String, required: true },
   status: {
     type: String,
-    enum: [
-      'active',
-      'deleted',
-    ],
+    enum: Object.values(EGroupStatus),
   },
   updatedAt: { type: Date, default: new Date() },
-});
+})
 
-module.exports = GroupSchema;
-
+export default GroupSchema
